@@ -7,7 +7,6 @@
 <meta name="description" content="Portofolio Keisha Achmad Fiandika Putera — mahasiswa Teknologi Informasi, Politeknik Negeri Madiun. Jaringan komputer, administrasi jaringan, dan pengembangan web.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,7 +42,7 @@
         <div class="hero-photo">
           <img src="https://github.com/shaachmadfii49/foto-web-portofolio/blob/main/Foto%20Formal.png?raw=true" alt="Foto Keisha" onerror="this.parentNode.classList.add('empty')">
           <div class="photo-empty">
-            <span>Foto</span>
+            <span>Foto profil</span>
           </div>
         </div>
       </div>
@@ -53,7 +52,6 @@
         <div class="hero-label"><span class="dot"></span>Portofolio — 2026</div>
         <h1>Keisha Achmad<br>Fiandika Putera</h1>
         
-        <!-- WADAH EFEK KETIK -->
         <p class="role">
           <span id="typed-text"></span><span class="cursor"></span>
         </p>
@@ -98,7 +96,39 @@
       </div>
       <h2>Hal yang pernah <em>saya kerjakan</em></h2>
     </div>
-    <!-- DAFTAR PROJEK DIKOSONGKAN DULU -->
+
+    <!-- KERANGKA PROJEK -->
+    <div class="projects-grid reveal">
+      
+      <!-- KARTU PROJEK 1: WEB KEUANGAN (TERISI + KETERANGAN) -->
+      <a href="https://keuangan-harian-omega.vercel.app/" target="_blank" class="project-card">
+        <div class="project-thumb">
+          <iframe src="https://keuangan-harian-omega.vercel.app/" loading="lazy" title="Preview Aplikasi Keuangan" sandbox="allow-scripts allow-same-origin"></iframe>
+          <div class="project-overlay">
+            <span>Buka Website ↗</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3>Aplikasi Keuangan Harian</h3>
+          <p>Web app untuk mencatat pemasukan dan pengeluaran harian dengan tampilan yang modern.</p>
+          <!-- Keterangan Tambahan -->
+          <div class="project-note">*Catatan: Web ini masih bersifat pribadi, belum dibuka untuk publik.</div>
+        </div>
+      </a>
+
+      <!-- KARTU PROJEK 2: KOSONG -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-body"></div>
+      </article>
+
+      <!-- KARTU PROJEK 3: KOSONG -->
+      <article class="project-card">
+        <div class="project-thumb"></div>
+        <div class="project-body"></div>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -114,7 +144,6 @@
     </div>
 
     <div class="certs-grid">
-
       <!-- SERTIFIKAT 1 -->
       <article class="cert reveal">
         <div class="cert-thumb">
@@ -182,7 +211,7 @@
       <!-- SERTIFIKAT 5 -->
       <article class="cert reveal">
         <div class="cert-thumb">
-          <img src="assets/sertifikat/lsp-network-admin.jpg" alt="Sertifikat Kompetensi Network Administrator" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+          <img src="https://github.com/shaachmadfii49/foto-web-portofolio/blob/main/lsp-network-admin.jpg?raw=true" alt="Sertifikat Kompetensi Network Administrator" loading="lazy" onerror="this.parentNode.classList.add('empty')">
           <div class="cert-empty"><span>No Image</span></div>
         </div>
         <div class="cert-body">
@@ -230,7 +259,7 @@
       <!-- SERTIFIKAT 8 -->
       <article class="cert reveal">
         <div class="cert-thumb">
-          <img src="assets/sertifikat/kidi-iot.jpg" alt="Sertifikat KiDi IoT" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+          <img src="https://github.com/shaachmadfii49/foto-web-portofolio/blob/main/kidi-iot.jpg?raw=true" alt="Sertifikat KiDi IoT" loading="lazy" onerror="this.parentNode.classList.add('empty')">
           <div class="cert-empty"><span>No Image</span></div>
         </div>
         <div class="cert-body">
@@ -246,7 +275,7 @@
       <!-- SERTIFIKAT 9 -->
       <article class="cert reveal">
         <div class="cert-thumb">
-          <img src="assets/sertifikat/magang.jpg" alt="Sertifikat Magang" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+          <img src="https://github.com/shaachmadfii49/foto-web-portofolio/blob/main/magang.jpg?raw=true" alt="Sertifikat Magang" loading="lazy" onerror="this.parentNode.classList.add('empty')">
           <div class="cert-empty"><span>No Image</span></div>
         </div>
         <div class="cert-body">
@@ -262,7 +291,7 @@
       <!-- SERTIFIKAT 10 -->
       <article class="cert reveal">
         <div class="cert-thumb">
-          <img src="assets/sertifikat/dasar-ai.jpg" alt="Sertifikat Belajar Dasar AI" loading="lazy" onerror="this.parentNode.classList.add('empty')">
+          <img src="https://github.com/shaachmadfii49/foto-web-portofolio/blob/main/dasar-ai.jpg?raw=true" alt="Sertifikat Belajar Dasar AI" loading="lazy" onerror="this.parentNode.classList.add('empty')">
           <div class="cert-empty"><span>No Image</span></div>
         </div>
         <div class="cert-body">
@@ -308,40 +337,35 @@
 
     <div class="contact-wrap">
       <div class="contact-list reveal">
-
         <div class="contact-item">
-          <div class="ci-icon"><span>@</span></div>
+          <div class="ci-icon">@</div>
           <div class="ci-text">
             <small>Email</small>
             <strong id="emailText">keishaachmadfiandika@gmail.com</strong>
           </div>
           <button class="copy-btn" id="copyBtn">Salin</button>
         </div>
-
         <a class="contact-item" href="https://www.linkedin.com/in/keishaachmadfiandikaputera/" target="_blank" rel="noopener">
-          <div class="ci-icon"><span>in</span></div>
+          <div class="ci-icon">in</div>
           <div class="ci-text">
             <small>LinkedIn</small>
             <strong>/in/keishaachmadfiandikaputera</strong>
           </div>
         </a>
-
         <a class="contact-item" href="https://github.com/shaachmadfii49" target="_blank" rel="noopener">
-          <div class="ci-icon"><span>git</span></div>
+          <div class="ci-icon">git</div>
           <div class="ci-text">
             <small>GitHub</small>
             <strong>@shaachmadfii49</strong>
           </div>
         </a>
-
         <a class="contact-item" href="https://www.instagram.com/saachmadfii/" target="_blank" rel="noopener">
-          <div class="ci-icon"><span>ig</span></div>
+          <div class="ci-icon">ig</div>
           <div class="ci-text">
             <small>Instagram</small>
             <strong>@saachmadfii</strong>
           </div>
         </a>
-
       </div>
     </div>
   </div>

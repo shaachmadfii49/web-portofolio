@@ -6,7 +6,7 @@
 /* ================= VARIABEL WARNA NETWORKING ================= */
 :root{
   --bg-dark: #0a0f1c;
-  --bg-surface: rgba(30, 41, 59, 0.7); /* Efek Kaca */
+  --bg-surface: rgba(30, 41, 59, 0.7);
   --bg-surface-hover: rgba(51, 65, 85, 0.9);
   
   --text-main: #f8fafc;
@@ -17,7 +17,6 @@
   --accent-green: #10b981;
   
   --border-glass: rgba(255, 255, 255, 0.1);
-  --border-glow: rgba(6, 182, 212, 0.5);
   
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -28,7 +27,6 @@ html{scroll-behavior:smooth}
 body{
   font-family: var(--font-sans);
   background-color: var(--bg-dark);
-  /* Pola titik-titik jaringan (Network Grid) */
   background-image: 
     radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
@@ -121,7 +119,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   align-items:center; 
 }
 
-/* --- FOTO PROFIL LINGKARAN (NETWORK NODE) --- */
 .hero-visual {
   position: relative;
   display: flex;
@@ -136,7 +133,7 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
-  border-radius: 50%; /* Kembali ke Lingkaran */
+  border-radius: 50%;
   border: 3px solid var(--accent-cyan);
   box-shadow: 0 0 30px rgba(6, 182, 212, 0.3), inset 0 0 20px rgba(6, 182, 212, 0.2);
   overflow: hidden;
@@ -150,7 +147,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   object-fit: cover;
 }
 
-/* Efek Cincin Berputar */
 .hero-photo::before {
   content: '';
   position: absolute;
@@ -173,7 +169,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
 .hero-photo.empty img{display:none}
 .hero-photo.empty .photo-empty{display:flex}
 
-/* Dekorasi Node Jaringan */
 .deco-block {
   position: absolute;
   border-radius: 50%;
@@ -198,7 +193,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* --- TEKS KANAN --- */
 .hero-text { display: flex; flex-direction: column; align-items: flex-start; }
 
 .hero-label{
@@ -234,7 +228,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   align-items: center;
 }
 
-/* Kursor Ketik Kotak */
 .cursor {
   display: inline-block;
   width: 3px;
@@ -252,7 +245,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   margin-bottom: 32px;
 }
 
-/* --- TOMBOL MODERN --- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   padding:14px 28px;
@@ -271,7 +263,6 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   box-shadow: 0 8px 25px rgba(6, 182, 212, 0.6);
 }
 
-/* ================= SOCIALS ================= */
 .socials{
   display:flex;flex-wrap:wrap;gap:16px;
   margin-top: 24px;
@@ -319,7 +310,121 @@ section{padding:clamp(60px,8vw,100px) 0;scroll-margin-top:80px}
   color: transparent;
 }
 
-/* ================= SERTIFIKASI (GLASS CARDS) ================= */
+/* ================= PROJEK (GLASS CARDS) ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--bg-surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease;
+  text-decoration: none;
+  min-height: 250px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.15);
+  background: var(--bg-surface-hover);
+}
+
+.project-thumb {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border-glass);
+  overflow: hidden;
+}
+
+.project-thumb iframe,
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  pointer-events: none; 
+  transform: scale(1.02); 
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-thumb img {
+  transform: scale(1.08); 
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 28, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.project-overlay span {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 10px 20px;
+  border: 1px solid var(--accent-purple);
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.2);
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-overlay span {
+  transform: translateY(0);
+}
+
+.project-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.project-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.project-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* TAMBAHAN CSS UNTUK CATATAN PROJEK */
+.project-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-glass);
+}
+
+/* ================= SERTIFIKASI ================= */
 .certs-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
@@ -560,7 +665,7 @@ footer{
   .hero-visual { max-width: 260px; }
 }
 
-@media (max-width:760px){
+@media (max-width:768px){
   .hamburger{display:flex}
   .nav-links{
     position:fixed;left:16px;right:16px;top:75px;
@@ -577,6 +682,7 @@ footer{
   .nav-links.open{opacity:1;transform:none;pointer-events:auto}
   .nav-links a{padding:12px; border-radius: 8px;}
   
+  .projects-grid { grid-template-columns: 1fr; }
   .certs-grid { grid-template-columns: 1fr; }
   .contact-item { flex-direction: column; text-align: center; }
   .contact-item .ci-text { margin-bottom: 10px; }
